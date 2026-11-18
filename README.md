@@ -45,4 +45,5 @@ A pack cites the skill's rules by their subject in the skill's own words ([CONTR
 
 Not for agents (§ Frameworks).
 
+- [Working with UiPath genomes](https://github.com/UiPath/skills/blob/main/docs/guides/genome/working-with-uipath-genome.md) — what a genome holds, how an automation is extracted into one and rebuilt from it, and who does what.
 - `<framework>/docs/source-repositories.md` — public repositories each framework's pack drew on, each with its licence: [automation-anywhere/](automation-anywhere/docs/source-repositories.md), [blue-prism/](blue-prism/docs/source-repositories.md).
