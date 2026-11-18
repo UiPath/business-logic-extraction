@@ -1,6 +1,6 @@
 # business-logic-extraction
 
-Extracts a customer's business logic from their legacy automation exports, so UiPath automations can be built from it. Per framework: an inventory script that reads the framework's export, a **source guide** (detection, inventory, signals, component → UiPath skill mapping, composite actions, UI target locators, test data, evidence) and a **selectors guide** (locator formats and their attribute-by-attribute translation into UiPath targets). Consumed by two skills of the [UiPath/skills](https://github.com/UiPath/skills) plugin: `uipath-planner` extracts the genome, `uipath-genome` builds it, from a local checkout the user points to. Not part of the public plugin — never copy a folder of this repository into `skills/`.
+Extracts business logic from legacy automation exports, so UiPath automations can be built from it. Per framework: an inventory script that reads the framework's export, a **source guide** (detection, inventory, signals, component → UiPath skill mapping, composite actions, UI target locators, test data, evidence) and a **selectors guide** (locator formats and their attribute-by-attribute translation into UiPath targets). Consumed by two skills of the [UiPath/skills](https://github.com/UiPath/skills) plugin: `uipath-planner` extracts the genome, `uipath-genome` builds it, from a local checkout the user points to. Not part of the public plugin — never copy a folder of this repository into `skills/`.
 
 ## Layout
 
