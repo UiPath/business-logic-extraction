@@ -1,6 +1,6 @@
 # business-logic-extraction
 
-Extracts business logic from legacy automation exports, so UiPath automations can be built from it. Per framework: an inventory script that reads the framework's export, a **source guide** (detection, inventory, signals, component → UiPath skill mapping, composite actions, UI target locators, test data, evidence) and a **selectors guide** (locator formats and their attribute-by-attribute translation into UiPath targets). Consumed by two skills of the [UiPath/skills](https://github.com/UiPath/skills) plugin: `uipath-planner` extracts the genome, `uipath-genome` builds it, from a local checkout the user points to. Not part of the public plugin — never copy a folder of this repository into `skills/`.
+Enables organizations to extract the business logic of their existing automations to a Markdown file format that can be implemented in UiPath. Per framework: an inventory script that reads the framework's export, a **source guide** (detection, inventory, signals, component → UiPath skill mapping, composite actions, UI target locators, test data, evidence) and a **selectors guide** (locator formats and their attribute-by-attribute translation into UiPath targets). Consumed by two skills of the [UiPath/skills](https://github.com/UiPath/skills) plugin: `uipath-planner` extracts the genome, `uipath-genome` builds it, from a local checkout the user points to. Not part of the public plugin — never copy a folder of this repository into `skills/`.
 
 ## Layout
 
@@ -44,6 +44,26 @@ A pack cites the skill's rules by their subject in the skill's own words ([CONTR
 ## For people
 
 Not for agents (§ Frameworks).
+
+### Before you start
+
+#### Minimum requirements
+
+| Area | Minimum |
+|---|---|
+| Coding agent | Most coding agents are supported, including Claude Code, Codex, UiPath Autopilot and Cursor. The agent needs access to at least one model below. |
+| LLM models | Claude Opus 5.0+ / Fable 5.0+, or OpenAI GPT Sol 6.1+ / Astra 6.0+. If your coding agent or customer LLM model is not on the list, reach out to us. |
+| Installed software | Python 3.12+; latest UiPath CLI; latest official UiPath skills; UiPath Studio LTS 26.10.x / STS 200+. Access to the latest stable Activities packages released after June 2026. |
+| Platform connection | UiPath CLI access to the customer's UiPath platform environment (Cloud / Automation Suite). |
+| User licences | An unattended UiPath Robot licence allocated to the migration user, and a UiPath Plus/Pro user licence assigned to that same user. |
+| User access | The migration user must have access to the tenant folders and resources needed for the migration and have a personal workspace folder. |
+
+#### Rights and settings
+
+- **Your rights:** check that you have the rights to use the exports with LLMs for the purpose of the migration, including any third-party content they may contain.
+- **Your setup:** confirm that model hosting, data handling and coding agent configuration meet your organization's requirements and respect rights reservations.
+
+### Resources
 
 - [Working with UiPath genomes](https://github.com/UiPath/skills/blob/main/docs/guides/genome/working-with-uipath-genome.md) — what a genome holds, how an automation is extracted into one and rebuilt from it, and who does what.
 - `<framework>/docs/source-repositories.md` — public repositories each framework's pack drew on, each with its licence: [automation-anywhere/](automation-anywhere/docs/source-repositories.md), [blue-prism/](blue-prism/docs/source-repositories.md).
